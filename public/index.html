@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+
+<head lang='en'>
+  <meta charset='utf-8'>
+  <meta name='viewport' content='width=device-width'>
+  <title>React Rollup App</title>
+</head>
+
+<body>
+  <noscript>
+    You need to enable JavaScript to run this app.
+  </noscript>
+  <div id="root"> </div>
+  <script>
+    import("/dist/module/index.js");
+    window.supportsDynamicImport = true;
+  </script>
+</body>
+
+</html>
