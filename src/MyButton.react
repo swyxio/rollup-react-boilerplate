@@ -1,0 +1,28 @@
+
+
+let $count = 23
+
+export const STYLE = `
+div {
+	color: ${$count > 5 ? 'blue' : 'green'};
+}
+`
+
+
+export default () => {
+  useEffect(() => console.log('rerendered')) // no need for React import
+  return (
+  <div>
+    Some Text
+    <MyButton onClick={() => ++$count}>
+      Count {$count}
+    </MyButton>
+  </div>
+  )
+}
+
+
+// I can define inline Components like normal
+function MyButton({onClick}) {
+  return <button className="Button" {...{onClick}}>{children}</button>
+}

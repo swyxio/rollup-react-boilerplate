@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-import './App.css'
+// import './App.css'
 
 // this doesnt work yet :(
-// import Test from './Test.react'
+import Test from './Test.react'
 
 class App extends Component {
   render() {

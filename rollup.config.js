@@ -26,9 +26,6 @@ export default {
   acornInjectPlugins: [
     require('acorn-jsx')()
   ],
-  globals: {
-      react: "React"
-  },
   plugins: [
     SFC(),
     progress(),
@@ -39,6 +36,7 @@ export default {
     reactSvg(),
     babel({
       exclude: 'node_modules/**',
+      extensions: ['.js', '.jsx', '.es6', '.es', '.mjs', '.react']
     }),
     commonjs({
       include: [

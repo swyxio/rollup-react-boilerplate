@@ -1,3 +1,14 @@
-export default function sd(){
-  return <div>hello world</div>
+let $count = 0
+
+export default () => {
+  return <button onClick={() => $count++}>
+  Some {$count}
+</button>
 }
+
+
+// export default () => {
+//   return <div>
+//     Some Text
+//   </div>
+// }
