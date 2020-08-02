@@ -1,11 +1,15 @@
 import React, { Component } from 'react'
 import './App.css'
 
+// this doesnt work yet :(
+// import Test from './Test.react'
+
 class App extends Component {
   render() {
     return (
       <div className="app">
         <header className="appHeader">
+          <Test />
           <p>
             Edit <code>src/App.jsx</code> and save to reload.
           </p>

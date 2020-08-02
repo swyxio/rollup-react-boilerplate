@@ -11,7 +11,7 @@ import postcss from 'rollup-plugin-postcss'
 import { uglify } from 'rollup-plugin-uglify'
 import livereload from 'rollup-plugin-livereload'
 import reactSvg from 'rollup-plugin-react-svg'
-
+import SFC from 'rollup-plugin-react-sfc'
 
 const production = !process.env.ROLLUP_WATCH
 export default {
@@ -23,29 +23,36 @@ export default {
       sourcemap: !production,
     },
   ],
+  acornInjectPlugins: [
+    require('acorn-jsx')()
+  ],
+  globals: {
+      react: "React"
+  },
   plugins: [
+    SFC(),
     progress(),
     nodeResolve({
       browser: true,
     }),
     json(),
     reactSvg(),
+    babel({
+      exclude: 'node_modules/**',
+    }),
     commonjs({
       include: [
         'node_modules/**',
       ],
       exclude: [
         'node_modules/process-es6/**',
+        'src/**'
       ],
       namedExports: {
         'node_modules/react/index.js': ['Children', 'Component', 'PropTypes', 'createElement'],
         'node_modules/react-dom/index.js': ['render'],
       },
     }),
-    babel({
-      exclude: 'node_modules/**',
-    }),
-
     postcss({
       plugins: [
         require('postcss-nested')
