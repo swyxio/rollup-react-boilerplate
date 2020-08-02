@@ -26,6 +26,8 @@ export default {
   acornInjectPlugins: [
     require('acorn-jsx')()
   ],
+  // external: ['styled-jsx'],
+  external: id => /^styled-jsx/.test(id),
   plugins: [
     SFC(),
     progress(),
@@ -40,10 +42,11 @@ export default {
     }),
     commonjs({
       include: [
-        'node_modules/**',
+        /node_modules/,
       ],
       exclude: [
         'node_modules/process-es6/**',
+        // 'node_modules/styled-jsx/**',
         'src/**'
       ],
       namedExports: {

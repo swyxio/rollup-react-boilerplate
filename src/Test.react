@@ -1,8 +1,15 @@
 let $count = 0
 
+export const STYLE = `
+  button {
+color: ${$count > 5 ? 'red' : 'blue'}
+  }
+`
+
+
 export default () => {
   return <button onClick={() => $count++}>
-  Some {$count}
+  styled-jsx works! {$count}
 </button>
 }
 
