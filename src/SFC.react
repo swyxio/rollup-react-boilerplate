@@ -1,0 +1,14 @@
+
+let $height = 300
+let $width = 300
+
+export const STYLE = `
+`
+
+export default () => {
+  return (<form>
+    <label>Height: <input type="number" $value={$height} /> </label>
+    <label>Width: <input type="number" $value={$width} /> </label>
+    <img src={`https://source.unsplash.com/random/300x300`} />
+  </form>)
+};

@@ -8,13 +8,5 @@
 
 import * as React from 'react'
 import * as ReactDOM from 'react-dom'
-// import App from './App'
-import Test from './Test.react'
-// import './index.css'
-
-// function App() {
-//   return <div> App</div>
-// }
-
-// ReactDOM.render(<App />, document.getElementById('root'))
-ReactDOM.render(React.createElement(Test), document.getElementById('root'))
+import App from './App'
+ReactDOM.render(React.createElement(App), document.getElementById('root'))

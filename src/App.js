@@ -1,38 +1,28 @@
-import React, { Component } from 'react'
-// import './App.css'
+import React from "react";
+import SFC from "./SFC.react";
 
-// this doesnt work yet :(
-import Test from './Test.react'
-
-class App extends Component {
-  render() {
-    return (
-      <div className="app">
-        <header className="appHeader">
-          <Test />
-          <p>
-            Edit <code>src/App.jsx</code> and save to reload.
-          </p>
-          <a
-            className="link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-          <a
-            className="link"
-            href="https://rollupjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn more about RollupJS
-          </a>
-        </header>
+export default function App() {
+  return (
+    <main>
+      <div class="card">
+        <h1>React SFC Demo</h1>
+        <SFC />
       </div>
-    )
-  }
+      <Footer />
+    </main>
+  );
 }
 
-export default App
+function Footer() {
+  return (
+    <div
+      style={{
+        position: "absolute",
+        bottom: "1em",
+      }}
+    >
+      <a href="https://github.com/sw-yx/rollup-react-boilerplate">
+        https://github.com/sw-yx/rollup-react-boilerplate
+      </a>
+    </div>)
+}
