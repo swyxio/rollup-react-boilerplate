@@ -1,13 +1,13 @@
 
-let $size = {
+let _size = {
   height: 300,
   width: 300
 }
 
 export default () => {
   return (<form>
-    <label>Height: <input type="number" $value={$size.height} step="10" /> </label>
-    <label>Width: <input type="number" $value={$size.width} step="10" /> </label>
-    <img src={`https://source.unsplash.com/random/${$size.height}x${$size.width}`} />
+    <label>Height: <input type="number" $value={_size.height} step="10" /> </label>
+    <label>Width: <input type="number" $value={_size.width} step="10" /> </label>
+    <img src={`https://source.unsplash.com/random/${_size.height}x${_size.width}`} />
   </form>)
-};
+}

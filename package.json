@@ -35,7 +35,7 @@
     "rollup-plugin-node-resolve": "^3.4.0",
     "rollup-plugin-postcss": "^1.6.2",
     "rollup-plugin-progress": "^0.4.0",
-    "rollup-plugin-react-sfc": "0.0.10",
+    "rollup-plugin-react-sfc": "0.0.11",
     "rollup-plugin-react-svg": "^2.1.0",
     "rollup-plugin-replace": "^2.0.0",
     "rollup-plugin-uglify": "^6.0.0",
@@ -43,6 +43,7 @@
     "serve": "^11.3.2"
   },
   "dependencies": {
+    "acorn": "^7.4.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "styled-jsx": "^3.3.0"
